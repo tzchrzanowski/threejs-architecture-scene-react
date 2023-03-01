@@ -1,31 +1,7 @@
-import { useRef, useState } from "react";
 import { useFrame } from '@react-three/fiber';
-
-// @ts-ignore
-function Box(props) {
-    const mesh = useRef();
-    const [hovered, setHover ] = useState(false);
-    const [active, setActive ] = useState(false);
-
-    useFrame((state, delta) => {
-        // @ts-ignore
-        return (mesh.current.rotation.x += delta);
-    });
-    return (
-        <mesh
-            {...props}
-            ref={mesh}
-            scale={active ? 1.5 : 1}
-            onClick={(event)=> setActive(!active)}
-            onPointerOver={(event)=> setHover(true)}
-            onPointerOut={(event)=> setHover(false)}
-            castShadow
-        >
-            <boxGeometry args={[0.1,3,1]}/>
-            <meshStandardMaterial color={hovered ? "cyan" : "gray"} />
-        </mesh>
-    )
-}
+import LongSideWall from "../walls/longSideWall";
+import Wall2m from "../walls/Wall2m";
+import Pillar from "../walls/Pillar";
 
 export const Scene = () => {
     return (
@@ -37,8 +13,11 @@ export const Scene = () => {
                 shadow-mapSize-width={2048}
                 shadow-mapSize-height={2048}
             />
-            <Box position={[-1.2, 0, 0]} />
-            <Box position={[1.2, 0, 0]} />
+            <LongSideWall position={[0, 0, 5.5]} />
+            <LongSideWall position={[5, 0, 5.5]} />
+            <Wall2m position={[1, 0, 11]} />
+            <Wall2m position={[4, 0, 11]} />
+            <Pillar position={[0, 0, 0]} />
         </>
     );
 };
