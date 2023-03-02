@@ -1,10 +1,14 @@
 import { useRef, useState } from "react";
 
 // @ts-ignore
-export default function Wall2m(props) {
+export default function Window(props) {
     const mesh = useRef();
     const [hovered, setHover ] = useState(false);
     const [active, setActive ] = useState(false);
+
+    const glassWidthFinal = props.glassWidth ? props.glassWidth : 0.05;
+    const glassLengthFinal = props.glassLength ? props.glassLength : 0.05;
+    const glassHeightFinal = props.glassHeight ? props.glassHeight : 2.2;
 
     return (
         <mesh
@@ -16,8 +20,8 @@ export default function Wall2m(props) {
             onPointerOut={(event)=> setHover(false)}
             castShadow
         >
-            <boxGeometry args={[2, 2.2 ,0.2]} />
-            <meshStandardMaterial color={hovered ? "cyan" : "gray"} />
+            <boxGeometry args={[glassWidthFinal, glassHeightFinal ,glassLengthFinal]} />
+            <meshStandardMaterial color={hovered ? "cyan" : "white"} transparent={true} opacity={0.8} />
         </mesh>
     )
 }

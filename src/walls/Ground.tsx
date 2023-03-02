@@ -8,7 +8,7 @@ export function Ground () {
         >
             <planeGeometry args={[100, 100, 1, 1]}/>
             <shadowMaterial opacity={0.4}/>
-            <meshStandardMaterial color={"lightgray"} />
+            <meshStandardMaterial color={"gray"} />
         </mesh>
     );
 }
