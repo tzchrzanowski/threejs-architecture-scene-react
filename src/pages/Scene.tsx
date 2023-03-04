@@ -2,6 +2,7 @@ import { useFrame } from '@react-three/fiber';
 import Pillar from "../walls/Pillar";
 import Wall from "../walls/Wall";
 import Window from "../walls/Window";
+import Stairs from "../combinedStructures/Stairs";
 
 export const Scene = () => {
     return (
@@ -30,6 +31,8 @@ export const Scene = () => {
             <Window position={[2.5, 0, 8]} glassWidth={1} />
             <Pillar position={[3, 0, 8]} />
             <Window position={[3.5, 0, 8]} glassWidth={1} />
+            {/* stairs */}
+            <Stairs />
         </>
     );
 };
