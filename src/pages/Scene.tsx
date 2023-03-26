@@ -3,6 +3,9 @@ import { useFrame } from '@react-three/fiber';
 import Stairs from "../combinedStructures/Stairs";
 import GlassWall from "../combinedStructures/GlassWall";
 import OuterWallsGround from "../combinedStructures/OuterWallsGround";
+import Floor from "../walls/Floor";
+import GroundFloor from "../combinedStructures/GroundFloor";
+import UpperFloor from "../combinedStructures/UpperFloor";
 
 export const Scene = () => {
     return (
@@ -19,6 +22,8 @@ export const Scene = () => {
             <OuterWallsGround />
             <GlassWall />
             <Stairs />
+            <GroundFloor />
+            <UpperFloor />
         </>
     );
 };

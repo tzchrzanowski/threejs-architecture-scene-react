@@ -1,10 +1,14 @@
 import { useRef, useState } from "react";
 
 // @ts-ignore
-export default function Pillar(props) {
+export default function Floor(props) {
     const mesh = useRef();
     const [hovered, setHover ] = useState(false);
     const [active, setActive ] = useState(false);
+
+    const floorWidthFinal = props.wallWidth ? props.wallWidth : 3;
+    const floorLengthFinal = props.wallLength ? props.wallLength : 11;
+    const floorHeightFinal = props.wallHeight ? props.wallHeight : 0.3;
 
     return (
         <mesh
@@ -16,8 +20,8 @@ export default function Pillar(props) {
             onPointerOut={(event)=> setHover(false)}
             castShadow
         >
-            <boxGeometry args={[0.1, 2.2 ,0.1]} />
-            <meshStandardMaterial color={hovered ? "cyan" : "black"} />
+            <boxGeometry args={[floorWidthFinal, floorHeightFinal ,floorLengthFinal]} />
+            <meshStandardMaterial color={hovered ? "cyan" : "darkGray"} />
         </mesh>
     )
 }
