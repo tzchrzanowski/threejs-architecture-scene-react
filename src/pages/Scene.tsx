@@ -1,11 +1,8 @@
 import { useFrame } from '@react-three/fiber';
 
-import Stairs from "../combinedStructures/Stairs";
-import GlassWall from "../combinedStructures/GlassWall";
-import OuterWallsGround from "../combinedStructures/OuterWallsGround";
-import Floor from "../walls/Floor";
-import GroundFloor from "../combinedStructures/GroundFloor";
-import UpperFloor from "../combinedStructures/UpperFloor";
+import GroundFloor from "../floors/0/GroundFloor";
+import SecondFloor from "../floors/1/SecondFloor";
+import Roof from "../floors/roof/Roof";
 
 export const Scene = () => {
     return (
@@ -18,12 +15,10 @@ export const Scene = () => {
                 shadow-mapSize-width={2048}
                 shadow-mapSize-height={2048}
             />
-            {/* structures: :*/}
-            <OuterWallsGround />
-            <GlassWall />
-            <Stairs />
-            <GroundFloor />
-            <UpperFloor />
+            {/* floors: */}
+            <GroundFloor/>
+            <SecondFloor/>
+            <Roof/>
         </>
     );
 };

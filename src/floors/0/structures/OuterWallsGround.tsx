@@ -1,6 +1,6 @@
-import Pillar from "../walls/Pillar";
-import Wall from "../walls/Wall";
-import Window from "../walls/Window";
+import Pillar from "../../../walls/Pillar";
+import Wall from "../../../walls/Wall";
+import Window from "../../../walls/Window";
 
 export default function OuterWallsGround() {
     return (
