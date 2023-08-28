@@ -1,14 +1,14 @@
-import Pillar from "../../../walls/Pillar";
-import Window from "../../../walls/Window";
+import Pillar from "../../simple/Pillar";
+import Window from "../../simple/Window";
 
-interface GlassFloorInterface {
+interface WindowWithFrameInterface {
     longerAxis: number,
     zAxis: number,
     yAxis: number,
     windowWidth: number,
 }
 
-export default function GlassFloor ({longerAxis, zAxis, yAxis, windowWidth}: GlassFloorInterface) {
+export default function WindowWIthFrame ({longerAxis, zAxis, yAxis, windowWidth}: WindowWithFrameInterface) {
     const pillarPosOne = yAxis - (windowWidth / 2);
     const pillarPosTwo = yAxis + (windowWidth / 2);
 

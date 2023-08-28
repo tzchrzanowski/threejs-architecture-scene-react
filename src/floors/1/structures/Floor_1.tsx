@@ -1,4 +1,4 @@
-import Floor from "../../../walls/Floor";
+import Floor from "../../../components/simple/Floor";
 
 export default function Floor_1() {
     return (

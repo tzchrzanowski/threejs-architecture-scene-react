@@ -1,4 +1,4 @@
-import Wall from "../../../walls/Wall";
+import Wall from "../../../components/simple/Wall";
 
 export default function Stairs() {
     return (

@@ -1,5 +1,5 @@
-import Pillar from "../../../walls/Pillar";
-import Window from "../../../walls/Window";
+import Pillar from "../../../components/simple/Pillar";
+import Window from "../../../components/simple/Window";
 
 export default function GlassWall() {
     return (

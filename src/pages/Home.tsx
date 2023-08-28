@@ -2,7 +2,7 @@ import React from "react";
 import {OrbitControls} from "@react-three/drei";
 import {Canvas} from "@react-three/fiber";
 import {Scene} from "./Scene";
-import {Ground} from "../walls/Ground";
+import {Ground} from "../components/simple/Ground";
 
 export function Home () {
 
