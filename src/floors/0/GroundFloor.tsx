@@ -7,7 +7,7 @@ export default function GroundFloor() {
     return (
         <>
             <OuterWalls zAxis={0} />
-            <GlassWallSections zAxis={0} yAxis={8} startXAxis={0.0} glassWidth={1} numberOfElements={5}/>
+            <GlassWallSections zAxis={0} yAxis={8} startXAxis={0.0} glassWidth={1} numberOfElements={6}/>
             <Stairs />
             <Floor_0 />
         </>
