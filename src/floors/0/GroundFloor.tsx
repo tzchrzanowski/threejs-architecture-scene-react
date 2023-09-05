@@ -9,7 +9,7 @@ export default function GroundFloor() {
         <>
             <OuterWalls zAxis={0} />
             <GlassWallSections zAxis={0} yAxis={8} startXAxis={0.0} glassWidth={1} numberOfElements={6}/>
-            <Stairs stepsAmount={13} />
+            <Stairs stepsAmount={13} startX={4.5} startZ={1} startY={6.7}/>
             <GlassWallSections zAxis={0} yAxis={2.8} startXAxis={0.0} glassWidth={1} numberOfElements={6}/>
             <Floor_0 />
         </>
