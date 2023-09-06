@@ -1,6 +1,6 @@
-import Floor_1 from "./structures/Floor_1";
 import WindowWIthFrame from "components/compounds/windowWithFrame/windowWithFrame";
 import OuterWalls from "components/compounds/outerWalls/outerWalls";
+import Floor from 'components/simple/Floor';
 
 export default function SecondFloor () {
     const zAxisSecondFloor: number = 2.1;
@@ -15,7 +15,9 @@ export default function SecondFloor () {
     const westWindowWIdth: number = 0.9;
     return (
         <>
-            <Floor_1 />
+            <Floor position={[2.5,1,1.5]} wallWidth={5} wallLength={3} wallHeight={0.3} />
+            <Floor position={[2.5,1,9]} wallWidth={5} wallLength={4} wallHeight={0.3} />
+            <Floor position={[3.2,1,5]} wallWidth={1.5} wallLength={4} wallHeight={0.3} />
             <OuterWalls zAxis={2.2}/>
             {/* east windows */}
             <WindowWIthFrame zAxis={zAxisSecondFloor} yAxis={yAxisEast} longerAxis={xAxisNorth} windowWidth={eastWindowWidth}/>

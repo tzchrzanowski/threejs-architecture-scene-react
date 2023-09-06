@@ -29,7 +29,6 @@ export default function Stairs({stepsAmount, startX, startY, startZ}: StairsInte
     }, []);
 
     React.useEffect(()=> {
-        console.log(stepsList);
     }, [stepsList])
 
     return (
