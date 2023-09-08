@@ -17,6 +17,7 @@ export default function OuterWalls({zAxis}: OuterWallsInterface) {
             <Wall position={[0.5, zAxis, 0]} wallWidth={1} wallHeight={2.2} wallLength={0.2} />
             <Wall position={[3.5, zAxis, 0]} wallWidth={3} wallHeight={2.2} wallLength={0.2} />
             <Window position={[1.5, zAxis, 0]} glassWidth={1} />
+            <Window position={[2.5, zAxis, 11]} glassWidth={1} />
         </>
     );
 }

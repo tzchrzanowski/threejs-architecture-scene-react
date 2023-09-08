@@ -1,6 +1,7 @@
 import WindowWIthFrame from "components/compounds/windowWithFrame/windowWithFrame";
 import OuterWalls from "components/compounds/outerWalls/outerWalls";
 import Floor from 'components/simple/Floor';
+import Window from "../../components/simple/Window";
 
 export default function SecondFloor () {
     const zAxisSecondFloor: number = 2.1;
@@ -22,10 +23,12 @@ export default function SecondFloor () {
             {/* east windows */}
             <WindowWIthFrame zAxis={zAxisSecondFloor} yAxis={yAxisEast} longerAxis={xAxisNorth} windowWidth={eastWindowWidth}/>
             <WindowWIthFrame zAxis={zAxisSecondFloor} yAxis={yAxisEast} longerAxis={xAxisSouth} windowWidth={eastWindowWidth}/>
+            <Window position={[3.2, zAxisSecondFloor, xAxisNorth]} glassWidth={1.5} />
 
             {/* west windows */}
             <WindowWIthFrame zAxis={zAxisSecondFloor} yAxis={yAxisWest} longerAxis={xAxisNorth} windowWidth={westWindowWIdth}/>
             <WindowWIthFrame zAxis={zAxisSecondFloor} yAxis={yAxisWest} longerAxis={xAxisSouth} windowWidth={westWindowWIdth}/>
+            <Window position={[3.2, zAxisSecondFloor, xAxisSouth]} glassWidth={1.5} />
 
         </>
     )
