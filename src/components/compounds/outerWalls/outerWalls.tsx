@@ -9,7 +9,7 @@ interface OuterWallsInterface {
 export default function OuterWalls({zAxis}: OuterWallsInterface) {
     return (
         <>
-            <Wall position={[0, zAxis, 5.5]} wallWidth={0.2} wallHeight={2.2} wallLength={11} props={""} />
+            <Wall position={[0, zAxis, 5.5]} wallWidth={0.2} wallHeight={2.2} wallLength={11} props={""} clickable={true} hoverable={true}/>
             <Wall position={[5, zAxis, 5.5]} wallWidth={0.2} wallHeight={2.2} wallLength={11} props={""} />
             <Wall position={[1, zAxis, 11]} wallWidth={2} wallHeight={2.2} wallLength={0.2} props={""} />
             <Wall position={[4, zAxis, 11]} wallWidth={2} wallHeight={2.2} wallLength={0.2} props={""} />

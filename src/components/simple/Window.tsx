@@ -10,12 +10,18 @@ export default function Window(props) {
     const glassLengthFinal = props.glassLength ? props.glassLength : 0.05;
     const glassHeightFinal = props.glassHeight ? props.glassHeight : 2.2;
 
+    const clicked = () => {
+        if(props.clickable == true){
+            setActive(!active)
+        }
+    }
+
     return (
         <mesh
             {...props}
             ref={mesh}
             scale={active ? 1.5 : 1}
-            onClick={(event)=> setActive(!active)}
+            onClick={(event)=> clicked()}
             onPointerOver={(event)=> setHover(true)}
             onPointerOut={(event)=> setHover(false)}
             castShadow

@@ -6,6 +6,9 @@ import Stairs from 'components/compounds/Staris/Stairs';
 export default function GroundFloor() {
     return (
         <>
+            {/*ground surrounding the building*/}
+            <Floor position={[2.5,-1,5.5]} wallWidth={40} wallLength={40} wallHeight={0.2} hoverable={false} color={"darkGrey"} />
+            {/*the building*/}
             <OuterWalls zAxis={0} />
             <GlassWallSections zAxis={0} yAxis={8} startXAxis={0.0} glassWidth={1} numberOfElements={6}/>
             <Stairs stepsAmount={13} startX={4.5} startZ={1} startY={6.7}/>
