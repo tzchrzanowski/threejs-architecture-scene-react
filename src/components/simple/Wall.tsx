@@ -18,6 +18,7 @@ export default function Wall4m(props) {
     const [transparentState, setTransparentState] = useState<boolean>(false);
     const [opacityState, setOpacityState] = useState<number>(0);
     const [textureState, setTextureState] = useState<Texture>();
+    const [dataFetched, setDataFetched] = useState<boolean>(false);
 
     const color = props.color || "lightGrey";
 
@@ -25,13 +26,28 @@ export default function Wall4m(props) {
     const wallLengthFinal = props.wallLength ? props.wallLength : 0.2;
     const wallHeightFinal = props.wallHeight ? props.wallHeight : 2.2;
 
+    const loader = new TextureLoader();
+
+
     React.useEffect(()=> {
-        const loader = new TextureLoader();
-        const texture = loader.load('https://th.bing.com/th/id/OIP.ykkHrhIi-h54lF6g5EyLdwHaE9?pid=ImgDet&rs=1');
-        setTextureState(texture);
-        console.log("textureState: ", texture);
+            fetchImage().then((res) => {
+                setTextureState(res);
+                console.log("textureState: ", textureState);
+            }).catch((e) => {
+                console.log(e.message);
+            })
     },[]);
 
+    const fetchImage = async () => {
+        const texture = loader.load('https://th.bing.com/th/id/OIP.ykkHrhIi-h54lF6g5EyLdwHaE9?pid=ImgDet&rs=1');
+        if (texture.image == null) {
+            console.log("couldnt load image..");
+        } else {
+            // setDataFetched(true);
+            console.log("texture.image = ", texture.image)
+            return texture;
+        }
+    }
 
     const clicked = () => {
         if(props.clickable == true){
