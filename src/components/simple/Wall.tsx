@@ -1,17 +1,14 @@
 import React, { useRef, useState } from "react";
+import { Suspense } from 'react'
 import { TextureLoader, Texture } from "three";
-// interface WallArgs {
-//     wallWidth: Number;
-//     wallLength: Number;
-//     wallHeight: Number;
-//     position: Number[];
-//     props: any;
-// }
+import textureConcrete from "../../assets/concrete_1.jpg";
 
-// export default function Wall4m({wallWidth, wallLength, wallHeight, position, props}) {
+import { sRGBEncoding } from "three";
 
 // @ts-ignore
 export default function Wall4m(props) {
+    const loader = new TextureLoader();
+
     const mesh = useRef();
     const [hovered, setHover ] = useState(false);
     const [active, setActive ] = useState(false);
@@ -26,56 +23,48 @@ export default function Wall4m(props) {
     const wallLengthFinal = props.wallLength ? props.wallLength : 0.2;
     const wallHeightFinal = props.wallHeight ? props.wallHeight : 2.2;
 
-    const loader = new TextureLoader();
-
-
+    /*
+    * On component init, loader will try to get the image from file path
+    * */
     React.useEffect(()=> {
-            fetchImage().then((res) => {
-                setTextureState(res);
-                console.log("textureState: ", textureState);
-            }).catch((e) => {
-                console.log(e.message);
-            })
-    },[]);
+        const colorMap = loader.load(textureConcrete);
+        colorMap.encoding = sRGBEncoding;
+        setTextureState(colorMap);
+    }, []);
 
-    const fetchImage = async () => {
-        const texture = loader.load('https://th.bing.com/th/id/OIP.ykkHrhIi-h54lF6g5EyLdwHaE9?pid=ImgDet&rs=1');
-        if (texture.image == null) {
-            console.log("couldnt load image..");
-        } else {
-            // setDataFetched(true);
-            console.log("texture.image = ", texture.image)
-            return texture;
-        }
-    }
+    /*
+    * When textureState gets updated, then component will trigger re-render
+    * */
+    React.useEffect(()=> {
+        setDataFetched(!dataFetched);
+    }, [textureState])
 
     const clicked = () => {
         if(props.clickable == true){
-            // setActive(!active)
             setTransparentState(true);
             setOpacityState(0.5);
         }
     }
 
     return (
-        <mesh
-            {...props}
-            ref={mesh}
-            scale={active ? 1.5 : 1}
-            onClick={(event)=> clicked()}
-            onPointerOver={(event)=> setHover(true)}
-            onPointerOut={(event)=> setHover(false)}
-            castShadow
-            receiveShadow
-            transparent={transparentState}
-            opacity={opacityState}
-        >
-            <boxGeometry args={[wallWidthFinal, wallHeightFinal ,wallLengthFinal]} />
-            <meshStandardMaterial
-                // color={props.hoverable && hovered ? "cyan" : color}
-                // color={"0xFF8844"}
-                map={textureState}
-            />
-        </mesh>
+        <Suspense fallback={<div>loading..</div>}>
+            <mesh
+                {...props}
+                ref={mesh}
+                scale={active ? 1.5 : 1}
+                onClick={(event)=> clicked()}
+                onPointerOver={(event)=> setHover(true)}
+                onPointerOut={(event)=> setHover(false)}
+                castShadow
+                receiveShadow
+                transparent={transparentState}
+                opacity={opacityState}
+            >
+                <boxGeometry args={[wallWidthFinal, wallHeightFinal ,wallLengthFinal]} />
+                    {textureState && <meshPhysicalMaterial
+                        map={textureState}
+                    />}
+            </mesh>
+        </Suspense>
     )
 }
