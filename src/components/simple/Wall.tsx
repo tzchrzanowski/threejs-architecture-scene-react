@@ -1,6 +1,6 @@
 import React, { useRef, useState } from "react";
 import { Suspense } from 'react'
-import { TextureLoader, Texture } from "three";
+import {TextureLoader, Texture, RepeatWrapping, MirroredRepeatWrapping} from "three";
 import textureConcrete from "../../assets/concrete_1.jpg";
 
 import { sRGBEncoding } from "three";
@@ -10,8 +10,8 @@ export default function Wall4m(props) {
     const loader = new TextureLoader();
 
     const mesh = useRef();
-    const [hovered, setHover ] = useState(false);
-    const [active, setActive ] = useState(false);
+    const [hovered, setHover] = useState(false);
+    const [active, setActive] = useState(false);
     const [transparentState, setTransparentState] = useState<boolean>(false);
     const [opacityState, setOpacityState] = useState<number>(0);
     const [textureState, setTextureState] = useState<Texture>();
@@ -25,9 +25,16 @@ export default function Wall4m(props) {
 
     /*
     * On component init, loader will try to get the image from file path
+    * 2nd parameter of load texture function is a callback function that is setting up repeating of the used texture.
     * */
-    React.useEffect(()=> {
-        const colorMap = loader.load(textureConcrete);
+    React.useEffect(() => {
+        const colorMap: Texture = loader.load(textureConcrete, function(texture: Texture) {
+            texture.wrapS = MirroredRepeatWrapping;
+            texture.wrapT = MirroredRepeatWrapping;
+            const timesToRepeatHorizontally = props.wallLength < 5 ? 1 : 4; // = 4;
+            const timesToRepeatVertically = 1;
+            texture.repeat.set(timesToRepeatHorizontally, timesToRepeatVertically);
+        });
         colorMap.encoding = sRGBEncoding;
         setTextureState(colorMap);
     }, []);
