@@ -7,7 +7,8 @@ export default function GroundFloor() {
     return (
         <>
             {/*ground surrounding the building*/}
-            <Floor position={[2.5,-1,5.5]} wallWidth={40} wallLength={40} wallHeight={0.2} hoverable={false} color={"darkGrey"} />
+            <Floor position={[2.5,-1,5.5]} wallWidth={5} wallLength={11} wallHeight={0.2} hoverable={false} color={"darkGrey"} />
+
             {/*the building*/}
             <OuterWalls zAxis={0} />
             <GlassWallSections zAxis={0} yAxis={8} startXAxis={0.0} glassWidth={1} numberOfElements={6}/>

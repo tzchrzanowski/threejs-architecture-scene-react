@@ -1,7 +1,7 @@
 import React, { useRef, useState } from "react";
 import { Suspense } from 'react'
 import {TextureLoader, Texture, RepeatWrapping, MirroredRepeatWrapping} from "three";
-import textureConcrete from "../../assets/concrete_1.jpg";
+import textureConcrete from "../../assets/concrete_new_1.jpg";
 
 import { sRGBEncoding } from "three";
 
@@ -29,8 +29,11 @@ export default function Wall4m(props) {
     * */
     React.useEffect(() => {
         const colorMap: Texture = loader.load(textureConcrete, function(texture: Texture) {
-            texture.wrapS = MirroredRepeatWrapping;
-            texture.wrapT = MirroredRepeatWrapping;
+            // texture.wrapS = MirroredRepeatWrapping;
+            // texture.wrapT = MirroredRepeatWrapping;
+            texture.wrapS = RepeatWrapping;
+            texture.wrapT = RepeatWrapping;
+
             const timesToRepeatHorizontally = props.wallLength < 5 ? 1 : 4; // = 4;
             const timesToRepeatVertically = 1;
             texture.repeat.set(timesToRepeatHorizontally, timesToRepeatVertically);
