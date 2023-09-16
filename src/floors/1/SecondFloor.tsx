@@ -40,6 +40,7 @@ export default function SecondFloor () {
             <WindowWIthFrame zAxis={zAxisSecondFloor} yAxis={yAxisWest} longerAxis={xAxisSouth} windowWidth={westWindowWIdth}/>
             <Window position={[3.2, zAxisSecondFloor, xAxisSouth]} glassWidth={1.5} />
 
+
         </>
     )
 }
