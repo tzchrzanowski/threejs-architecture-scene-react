@@ -27,7 +27,7 @@ export default function Window(props) {
             castShadow
         >
             <boxGeometry args={[glassWidthFinal, glassHeightFinal ,glassLengthFinal]} />
-            <meshStandardMaterial color={hovered ? "cyan" : "white"} transparent={true} opacity={0.8} />
+            <meshPhysicalMaterial roughness={0.1} transmission={0.9} thickness={0.1}/>
         </mesh>
     )
 }

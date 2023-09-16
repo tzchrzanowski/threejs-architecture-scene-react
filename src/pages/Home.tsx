@@ -8,7 +8,7 @@ export function Home () {
 
     return (
         <div className="App">
-            <Canvas camera={{position :[14.4666, 2.0365, 5.56165], fov: 40}} shadows>
+            <Canvas camera={{position :[-4.4666, 13.0365, -10.56165], fov: 40}} shadows>
                 <Scene />
                 <Ground />
                 <OrbitControls minDistance={1} maxDistance={200}/>
