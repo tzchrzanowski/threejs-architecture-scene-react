@@ -4,14 +4,16 @@ import {Canvas} from "@react-three/fiber";
 import {Scene} from "./Scene";
 import {Ground} from "../components/simple/Ground";
 
+/*
+* 60 fov to see the inside of the house
+* */
 export function Home () {
-
     return (
         <div className="App">
-            <Canvas camera={{position :[-4.4666, 13.0365, -10.56165], fov: 20}} shadows>
+            <Canvas camera={{position :[-4.4666, 13.0365, -10.56165], fov: 60}} shadows>
                 <Scene />
                 <Ground />
-                <OrbitControls minDistance={1} maxDistance={200}/>
+                <OrbitControls minDistance={0} maxDistance={200}/>
             </Canvas>
         </div>
     );
