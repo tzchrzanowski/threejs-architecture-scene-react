@@ -6,13 +6,19 @@ import {createBrowserRouter, RouterProvider} from 'react-router-dom';
 import {TopNavigation} from "./navigation/top-navigation/TopNavigation";
 import ErrorPage from "./pages/ErrorPage";
 import Home from './pages/Home/Home';
+import ConcreteBlocks from "./pages/concrete-blocks/ConcreteBlocks";
 
 const router = createBrowserRouter([
     {
         path: "/House",
         element: <Home />,
-        errorElement : <ErrorPage />,
+        errorElement: <ErrorPage />,
     },
+    {
+        path: "/concrete-blocks",
+        element: <ConcreteBlocks />,
+        errorElement: <ErrorPage />,
+    }
 ]);
 
 const root = ReactDOM.createRoot(
