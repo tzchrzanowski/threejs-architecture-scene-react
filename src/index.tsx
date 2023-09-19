@@ -3,10 +3,9 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import reportWebVitals from './reportWebVitals';
 import {createBrowserRouter, RouterProvider} from 'react-router-dom';
-import {TopNavigation} from "./navigation/top-navigation/TopNavigation";
 import ErrorPage from "./pages/ErrorPage";
 import Home from './pages/Home/Home';
-import ConcreteBlocks from "./pages/concrete-blocks/ConcreteBlocks";
+import ConstructionBlocks from "./pages/construction-blocks/ConstructionBlocks";
 
 const router = createBrowserRouter([
     {
@@ -15,8 +14,8 @@ const router = createBrowserRouter([
         errorElement: <ErrorPage />,
     },
     {
-        path: "/concrete-blocks",
-        element: <ConcreteBlocks />,
+        path: "/construction-blocks",
+        element: <ConstructionBlocks />,
         errorElement: <ErrorPage />,
     }
 ]);

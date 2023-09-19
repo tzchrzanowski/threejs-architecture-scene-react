@@ -14,7 +14,7 @@ export function Home () {
         <>
             <TopNavigation />
             <div className="App">
-                <Canvas camera={{position :[-4.4666, 13.0365, -10.56165], fov: 60}} shadows>
+                <Canvas camera={{position :[-1.5, -0.2, -6], fov: 60}} shadows>
                     <Scene />
                     <Ground lengthX={100} lengthY={100}/>
                     <OrbitControls minDistance={0} maxDistance={200}/>
