@@ -1,6 +1,6 @@
 import React from "react";
-import Pillar from "components/simple/Pillar";
-import Window from "components/simple/Window";
+import Pillar from "three-components/simple/Pillar";
+import Window from "three-components/simple/Window";
 
 
 interface GlassWallSectionsInterface {

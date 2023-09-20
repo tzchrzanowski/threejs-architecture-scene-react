@@ -1,6 +1,6 @@
-import Pillar from "components/simple/Pillar";
-import Wall from "components/simple/Wall";
-import Window from "components/simple/Window";
+import Pillar from "three-components/simple/Pillar";
+import Wall from "three-components/simple/Wall";
+import Window from "three-components/simple/Window";
 
 interface OuterWallsInterface {
     zAxis: number,

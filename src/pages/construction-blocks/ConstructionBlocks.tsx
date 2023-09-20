@@ -4,8 +4,8 @@ import {OrbitControls} from "@react-three/drei";
 import "./ConstructionBlocks.css";
 
 import {Scene} from "./Scene";
-import {TopNavigation} from "navigation/top-navigation/TopNavigation";
-import {Ground} from "components/simple/Ground";
+import {TopNavigation} from "web-components/navigation/top-navigation/TopNavigation";
+import {Ground} from "three-components/simple/Ground";
 
 export function ConstructionBlocks() {
     return (

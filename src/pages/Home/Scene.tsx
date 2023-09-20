@@ -1,8 +1,8 @@
 import { useFrame } from '@react-three/fiber';
 
-import GroundFloor from "../../floors/0/GroundFloor";
-import SecondFloor from "../../floors/1/SecondFloor";
-import Roof from "../../floors/roof/Roof";
+import GroundFloor from "../../three-components/floors/0/GroundFloor";
+import SecondFloor from "../../three-components/floors/1/SecondFloor";
+import Roof from "../../three-components/floors/roof/Roof";
 
 export const Scene = () => {
     return (

@@ -1,5 +1,5 @@
 import { useRouteError } from "react-router-dom";
-import {TopNavigation} from "../navigation/top-navigation/TopNavigation";
+import {TopNavigation} from "../web-components/navigation/top-navigation/TopNavigation";
 import React from "react";
 
 export function ErrorPage() {

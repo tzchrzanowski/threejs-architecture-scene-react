@@ -2,8 +2,8 @@ import React from "react";
 import {OrbitControls} from "@react-three/drei";
 import {Canvas} from "@react-three/fiber";
 import {Scene} from "./Scene";
-import {Ground} from "../../components/simple/Ground";
-import {TopNavigation} from "../../navigation/top-navigation/TopNavigation";
+import {Ground} from "../../three-components/simple/Ground";
+import {TopNavigation} from "../../web-components/navigation/top-navigation/TopNavigation";
 import './Home.css';
 
 /*

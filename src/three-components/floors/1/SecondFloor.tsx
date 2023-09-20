@@ -1,8 +1,8 @@
-import WindowWIthFrame from "components/compounds/windowWithFrame/windowWithFrame";
-import OuterWalls from "components/compounds/outerWalls/outerWalls";
-import Floor from 'components/simple/Floor';
-import Window from "../../components/simple/Window";
-import Wall from "../../components/simple/Wall";
+import WindowWIthFrame from "three-components/compounds/windowWithFrame/windowWithFrame";
+import OuterWalls from "three-components/compounds/outerWalls/outerWalls";
+import Floor from 'three-components/simple/Floor';
+import Window from "../../simple/Window";
+import Wall from "../../simple/Wall";
 
 export default function SecondFloor () {
     const zAxisSecondFloor: number = 2.1;
@@ -34,11 +34,13 @@ export default function SecondFloor () {
             <WindowWIthFrame zAxis={zAxisSecondFloor} yAxis={yAxisEast} longerAxis={xAxisNorth} windowWidth={eastWindowWidth}/>
             <WindowWIthFrame zAxis={zAxisSecondFloor} yAxis={yAxisEast} longerAxis={xAxisSouth} windowWidth={eastWindowWidth}/>
             <Window position={[3.2, zAxisSecondFloor, xAxisNorth]} glassWidth={1.5} />
+            <WindowWIthFrame longerAxis={0} yAxis={1.52} zAxis={2.2} windowWidth={1}/>
 
             {/* west windows */}
             <WindowWIthFrame zAxis={zAxisSecondFloor} yAxis={yAxisWest} longerAxis={xAxisNorth} windowWidth={westWindowWIdth}/>
             <WindowWIthFrame zAxis={zAxisSecondFloor} yAxis={yAxisWest} longerAxis={xAxisSouth} windowWidth={westWindowWIdth}/>
             <Window position={[3.2, zAxisSecondFloor, xAxisSouth]} glassWidth={1.5} />
+            <WindowWIthFrame longerAxis={11} yAxis={2.5} zAxis={2.2} windowWidth={1}/>
 
 
         </>

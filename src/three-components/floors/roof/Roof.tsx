@@ -1,4 +1,4 @@
-import Floor from 'components/simple/Floor';
+import Floor from 'three-components/simple/Floor';
 
 export default function Roof() {
     return (

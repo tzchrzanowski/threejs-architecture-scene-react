@@ -1,5 +1,5 @@
 import React from 'react';
-import Wall from "components/simple/Wall";
+import Wall from "three-components/simple/Wall";
 
 /*
 * Stairs component that is generated with small individual blocks of wall aligned together in pattern.

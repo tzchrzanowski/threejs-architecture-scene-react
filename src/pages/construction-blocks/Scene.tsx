@@ -1,6 +1,6 @@
-import Wall from "components/simple/Wall";
+import Wall from "three-components/simple/Wall";
 import {Elements} from "data/Elements";
-import WindowWIthFrame from "components/compounds/windowWithFrame/windowWithFrame";
+import WindowWIthFrame from "three-components/compounds/windowWithFrame/windowWithFrame";
 
 interface LightPosition {
     x: number,
