@@ -2,30 +2,30 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
 import reportWebVitals from './reportWebVitals';
-import {createBrowserRouter, RouterProvider} from 'react-router-dom';
+import {createBrowserRouter, RouterProvider, createHashRouter} from 'react-router-dom';
 import ErrorPage from "./pages/ErrorPage";
 import Home from './pages/Home/Home';
 import ConstructionBlocks from "./pages/construction-blocks/ConstructionBlocks";
 
 const router = createBrowserRouter([
-    {
-        path: "/House",
-        element: <Home />,
-        errorElement: <ErrorPage />,
-    },
-    {
-        path: "/construction-blocks",
-        element: <ConstructionBlocks />,
-        errorElement: <ErrorPage />,
-    }
-]);
-
+        {
+            path: "/house",
+            element: <Home />,
+            errorElement: <ErrorPage />,
+        },
+        {
+            path: "/construction-blocks",
+            element: <ConstructionBlocks />,
+            errorElement: <ErrorPage />,
+        }
+    ]
+);
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement
 );
 root.render(
   <React.StrictMode>
-      <RouterProvider router={router} />
+          <RouterProvider router={router} />
   </React.StrictMode>
 );
 

@@ -17,7 +17,7 @@ export function Home () {
                 <Canvas camera={{position :[-1.5, -0.2, -6], fov: 60}} shadows>
                     <Scene />
                     <Ground lengthX={100} lengthY={100}/>
-                    <OrbitControls minDistance={0} maxDistance={200}/>
+                    <OrbitControls minDistance={0} maxDistance={18}/>
                 </Canvas>
             </div>
         </>
