@@ -6,10 +6,11 @@ import {createBrowserRouter, RouterProvider, createHashRouter} from 'react-route
 import ErrorPage from "./pages/ErrorPage";
 import Home from './pages/Home/Home';
 import ConstructionBlocks from "./pages/construction-blocks/ConstructionBlocks";
+import {TopNavigation} from "./web-components/navigation/top-navigation/TopNavigation";
 
 const router = createBrowserRouter([
         {
-            path: "/house",
+            path: "/",
             element: <Home />,
             errorElement: <ErrorPage />,
         },

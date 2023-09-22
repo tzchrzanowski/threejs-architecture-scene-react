@@ -3,4 +3,5 @@ export interface Elements {
     window: "window",
     floor: "floor",
     pillar: "pillar",
+    stairs: "stairs",
 }
