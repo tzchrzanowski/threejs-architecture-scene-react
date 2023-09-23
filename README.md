@@ -21,4 +21,4 @@ Type in terminal:
 or:
 ###### yarn install
 then:
-###### npm start
+###### npm run start
