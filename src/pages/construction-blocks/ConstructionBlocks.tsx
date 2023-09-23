@@ -34,6 +34,13 @@ export function ConstructionBlocks() {
                             <OrbitControls minDistance={0} maxDistance={12}/>
                         </Canvas>
                     </div>
+                    <div className={"element"}>
+                        <Canvas camera={{position :[0, 1, 4.8], fov: 60}} shadows>
+                            <Scene renderElement={"floor"} lightPosition={{x: -40,z: 22,y: 10}} />
+                            <Ground lengthX={20} lengthY={20}/>
+                            <OrbitControls minDistance={0} maxDistance={12}/>
+                        </Canvas>
+                    </div>
                 </div>
             </div>
         </>

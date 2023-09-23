@@ -8,7 +8,7 @@ interface ButtonsInterface {
 }
 
 const buttons: ButtonsInterface[] = [
-    {route: "/house", caption: "House"},
+    {route: "/", caption: "House"},
     {route: "/construction-blocks", caption: "Construction Blocks"}
 ];
 

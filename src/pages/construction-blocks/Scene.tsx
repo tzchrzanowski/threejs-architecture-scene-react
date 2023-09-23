@@ -2,6 +2,7 @@ import Wall from "three-components/simple/Wall";
 import {Elements} from "data/Elements";
 import WindowWIthFrame from "three-components/compounds/windowWithFrame/windowWithFrame";
 import Stairs from 'three-components/compounds/Staris/Stairs';
+import Floor from "three-components/simple/Floor";
 
 interface LightPosition {
     x: number,
@@ -36,6 +37,10 @@ export const Scene = ({renderElement, lightPosition}: ConstructionBlocksSceneInt
 
             {(renderElement == "stairs") ?
                 <Stairs stepsAmount={13} startX={0} startZ={1} startY={-5}/> : ""
+            }
+
+            {(renderElement == 'floor') ?
+                <Floor position={[0,-1.1,0]} wallWidth={5} wallLength={11} wallHeight={0.3} /> : ""
             }
         </>
     );
