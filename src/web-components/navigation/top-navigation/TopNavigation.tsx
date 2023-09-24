@@ -24,9 +24,8 @@ export function TopNavigation() {
     return (
         <div className={"nav-container"}>
             {buttons && buttons.map((button, id)=>{
-                return <Link to={button.route}>
+                return <Link to={button.route} key={id}>
                 <div
-                    key={id}
                     className={(hoveredButtons[id] ? "isHovered button-box" : "button-box")}
                     onMouseOver={() => handleHover(id, true)}
                     onMouseLeave={() => handleHover(id, false)}
