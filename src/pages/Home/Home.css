@@ -11,3 +11,13 @@ canvas {
     background-image: url(assets/sky.jpg);
     background-size: 100% 87%;
 }
+
+.home-caption-container {
+    position: absolute;
+    top: 20vh;
+    left: 10vw;
+    font-size: 50px;
+    z-index: 1;
+    color: white;
+    text-outline: #83fff5 5px;
+}

@@ -33,6 +33,9 @@ export function Home () {
         <>
             <TopNavigation />
             <div className="App">
+                <div className={"home-caption-container"}>
+                    Minimalism Architecture
+                </div>
                 <Canvas camera={{position :[-1.5, -0.2, -6], fov: 60}} shadows>
                     <fog attach="fog" args={[0xfff0ea, 8, 40]} />
                     <Rig>
