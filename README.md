@@ -1,5 +1,10 @@
 #### Architecture scene
 
+![Screenshot](screenshot-arch.png)
+
+### Link to deployed app:
+https://react-and-three.netlify.app/
+
 ### Technology used:
 ##
     React, Three.js
