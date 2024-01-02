@@ -9,7 +9,8 @@ interface ButtonsInterface {
 
 const buttons: ButtonsInterface[] = [
     {route: "/", caption: "House"},
-    {route: "/construction-blocks", caption: "Construction Blocks"}
+    {route: "/construction-blocks", caption: "Construction Blocks"},
+    {route: "/cross-section", caption: "Cross Section"}
 ];
 
 export function TopNavigation() {

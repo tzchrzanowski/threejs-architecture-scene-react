@@ -7,6 +7,7 @@ import ErrorPage from "./pages/ErrorPage";
 import Home from './pages/Home/Home';
 import ConstructionBlocks from "./pages/construction-blocks/ConstructionBlocks";
 import {TopNavigation} from "./web-components/navigation/top-navigation/TopNavigation";
+import CrossSection from "./pages/cross-section/CrossSection";
 
 const router = createBrowserRouter([
         {
@@ -17,6 +18,11 @@ const router = createBrowserRouter([
         {
             path: "/construction-blocks",
             element: <ConstructionBlocks />,
+            errorElement: <ErrorPage />,
+        },
+        {
+            path: "/cross-section",
+            element: <CrossSection />,
             errorElement: <ErrorPage />,
         }
     ]
