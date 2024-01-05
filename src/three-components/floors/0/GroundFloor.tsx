@@ -4,14 +4,17 @@ import GlassWallSections from "three-components/compounds/glassWallSections/Glas
 import Stairs from 'three-components/compounds/Staris/Stairs';
 import WindowWIthFrame from "../../compounds/windowWithFrame/windowWithFrame";
 
-export default function GroundFloor() {
+interface GroundFloorProps {
+        isCrossSection?: boolean
+}
+
+export default function GroundFloor({isCrossSection}: GroundFloorProps) {
     return (
         <>
             {/*ground surrounding the building*/}
             <Floor position={[2.5,-1,5.5]} wallWidth={5} wallLength={11} wallHeight={0.2} hoverable={false} color={"darkGrey"} />
-
             {/*the building*/}
-            <OuterWalls zAxis={0} />
+            <OuterWalls zAxis={0} isCrossSection={isCrossSection}/>
             <GlassWallSections zAxis={0} yAxis={8} startXAxis={0.0} glassWidth={1} numberOfElements={6}/>
             <Stairs stepsAmount={13} startX={4.5} startZ={1} startY={6.7}/>
             <GlassWallSections zAxis={0} yAxis={2.8} startXAxis={0.0} glassWidth={1} numberOfElements={6}/>

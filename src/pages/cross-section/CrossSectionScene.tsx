@@ -18,8 +18,8 @@ export const CrossSectionScene = () => {
                 shadow-mapSize-height={2048}
             />
             {/* floors: */}
-            <GroundFloor/>
-            <SecondFloor/>
+            <GroundFloor isCrossSection={true}/>
+            <SecondFloor isCrossSection={true}/>
             <Roof/>
         </>
     );

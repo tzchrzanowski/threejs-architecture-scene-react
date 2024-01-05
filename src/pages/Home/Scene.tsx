@@ -18,7 +18,7 @@ export const Scene = () => {
                 shadow-mapSize-height={2048}
             />
             {/* floors: */}
-            <GroundFloor/>
+            <GroundFloor />
             <SecondFloor/>
             <Roof/>
         </>

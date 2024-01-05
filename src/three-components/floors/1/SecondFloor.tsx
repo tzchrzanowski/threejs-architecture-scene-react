@@ -4,7 +4,11 @@ import Floor from 'three-components/simple/Floor';
 import Window from "../../simple/Window";
 import Wall from "../../simple/Wall";
 
-export default function SecondFloor () {
+interface SecondFloorProps {
+    isCrossSection?: boolean
+}
+
+export default function SecondFloor ({isCrossSection}: SecondFloorProps) {
     const zAxisSecondFloor: number = 2.1;
 
     const xAxisNorth: number = 7.1;
@@ -28,7 +32,7 @@ export default function SecondFloor () {
 
 
             {/* outer walls: */}
-            <OuterWalls zAxis={2.2}/>
+            <OuterWalls zAxis={2.2} isCrossSection={isCrossSection}/>
 
             {/* east windows */}
             <WindowWIthFrame zAxis={zAxisSecondFloor} yAxis={yAxisEast} longerAxis={xAxisNorth} windowWidth={eastWindowWidth}/>
