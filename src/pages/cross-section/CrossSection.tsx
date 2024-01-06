@@ -18,7 +18,24 @@ export function CrossSection () {
                 <div className={"home-caption-container"}>
                     Cross Section
                 </div>
-                <Canvas camera={{position :[-25, 0.5, 6], fov: 40}} shadows>
+                <Canvas
+                    camera={
+                        {
+                            position :[-2, 1, 16],
+                            fov: 40,
+                            view: {
+                                enabled: true,
+                                fullWidth: 100,
+                                fullHeight: 100,
+                                offsetX: 25,
+                                offsetY: 0,
+                                width: 100,
+                                height: 100,
+                            }
+                        }
+                    }
+                    shadows
+                >
                     <fog attach="fog" args={[0xfff0ea, 8, 40]} />
                     <CrossSectionScene />
                     <Ground lengthX={100} lengthY={100}/>
