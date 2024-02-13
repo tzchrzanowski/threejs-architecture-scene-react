@@ -1,7 +1,6 @@
-import * as THREE from "three"
 import React from "react";
-import {Environment, OrbitControls} from "@react-three/drei";
-import {Canvas, useFrame} from "@react-three/fiber";
+import {OrbitControls} from "@react-three/drei";
+import {Canvas} from "@react-three/fiber";
 import {CrossSectionScene} from "./CrossSectionScene";
 import {Ground} from "../../three-components/simple/Ground";
 import {TopNavigation} from "../../web-components/navigation/top-navigation/TopNavigation";
